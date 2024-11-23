@@ -15,7 +15,7 @@ export function genOpenapiSpec() {
 
 		externalDocs: {
 			description: "Repository",
-			url: "https://github.com/fedired-dev/fedired",
+			url: "https://github.com/fedired-dev/fedired-project",
 		},
 
 		servers: [
@@ -106,7 +106,7 @@ export function genOpenapiSpec() {
 			description: desc,
 			externalDocs: {
 				description: "Source code",
-				url: `https://github.com/fedired-dev/fedired/-/tree/develop/packages/backend/src/server/api/endpoints/${endpoint.name}.ts`,
+				url: `https://github.com/fedired-dev/fedired-project/-/tree/develop/packages/backend/src/server/api/endpoints/${endpoint.name}.ts`,
 			},
 			tags: endpoint.meta.tags || undefined,
 			security,

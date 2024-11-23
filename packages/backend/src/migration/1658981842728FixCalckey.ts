@@ -6,10 +6,10 @@ export class FixFedired1658981842728 implements MigrationInterface {
 			`UPDATE "meta" SET "useStarForReactionFallback" = TRUE;`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired'`,
+			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired-project'`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired/issues'`,
+			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired-project/issues'`,
 		);
 	}
 
@@ -18,10 +18,10 @@ export class FixFedired1658981842728 implements MigrationInterface {
 			`UPDATE "meta" SET "useStarForReactionFallback" = FALSE;`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired'`,
+			`UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired-project'`,
 		);
 		await queryRunner.query(
-			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired/issues'`,
+			`UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired-project/issues'`,
 		);
 	}
 }

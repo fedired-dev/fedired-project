@@ -59,7 +59,7 @@
 					<FormSection>
 						<div class="_formLinks">
 							<FormLink
-								to="https://github.com/fedired-dev/fedired"
+								to="https://github.com/fedired-dev/fedired-project"
 								external
 							>
 								<template #icon

@@ -362,7 +362,7 @@ export function setupEndpointsStatus(router: Router): void {
 		auth(true, ["write:statuses"]),
 		async (ctx) => {
 			const scheduledAt = new Date(Date.parse(ctx.request.body.scheduled_at));
-			// FIXME: Implement, see https://github.com/fedired-dev/fedired/-/issues/10903
+			// FIXME: Implement, see https://github.com/fedired-dev/fedired-project/-/issues/10903
 			throw new MastoApiError(501, "Not implemented");
 		},
 	);
@@ -371,7 +371,7 @@ export function setupEndpointsStatus(router: Router): void {
 		"/v1/scheduled_statuses/:id",
 		auth(true, ["write:statuses"]),
 		async (ctx) => {
-			// FIXME: Implement, see https://github.com/fedired-dev/fedired/-/issues/10903
+			// FIXME: Implement, see https://github.com/fedired-dev/fedired-project/-/issues/10903
 			throw new MastoApiError(501, "Not implemented");
 		},
 	);

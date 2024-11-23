@@ -1,6 +1,6 @@
 # Aviso para administradores de servidores
 
-Puede omitir las versiones intermedias al actualizar desde una versión anterior, pero lea los avisos y siga las instrucciones para cada versión intermedia antes de [actualizar](https://github.com/fedired-dev/fedired/-/blob/main/docs/upgrade.md).
+Puede omitir las versiones intermedias al actualizar desde una versión anterior, pero lea los avisos y siga las instrucciones para cada versión intermedia antes de [actualizar](https://github.com/fedired-dev/fedired-project/-/blob/main/docs/upgrade.md).
 
 ## v2024.10.02
 

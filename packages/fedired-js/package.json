@@ -2,7 +2,7 @@
 	"name": "fedired-js",
 	"version": "0.0.27",
 	"description": "Fedired SDK for JavaScript",
-	"homepage": "https://github.com/fedired-dev/fedired/-/tree/develop/packages/fedired-js",
+	"homepage": "https://github.com/fedired-dev/fedired-project/-/tree/develop/packages/fedired-js",
 	"main": "./built/index.js",
 	"types": "./src/index.ts",
 	"license": "MIT",
@@ -17,7 +17,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/fedired-dev/fedired.git"
+		"url": "https://github.com/fedired-dev/fedired-project.git"
 	},
 	"devDependencies": {
 		"@types/jest": "29.5.12",

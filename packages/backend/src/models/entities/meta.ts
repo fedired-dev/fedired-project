@@ -381,14 +381,14 @@ export class Meta {
 
 	@Column("varchar", {
 		length: 512,
-		default: "https://github.com/fedired-dev/fedired",
+		default: "https://github.com/fedired-dev/fedired-project",
 		nullable: false,
 	})
 	public repositoryUrl: string;
 
 	@Column("varchar", {
 		length: 512,
-		default: "https://github.com/fedired-dev/fedired/issues/new",
+		default: "https://github.com/fedired-dev/fedired-project/issues/new",
 		nullable: true,
 	})
 	public feedbackUrl: string | null;

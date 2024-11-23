@@ -142,7 +142,7 @@ sudo apt install ffmpeg
     ```
 3. Clonar el repositorio Fedired
     ```sh
-    git clone --branch=main https://github.com/fedired-dev/fedired.git
+    git clone --branch=main https://github.com/fedired-dev/fedired-project.git
     ```
 1. Copiar y editar el archivo de configuración
     ```sh

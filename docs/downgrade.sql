@@ -1002,8 +1002,8 @@ CREATE INDEX "IDX_3b33dff77bb64b23c88151d23e" ON "drive_file" ("maybeSensitive")
 CREATE INDEX "IDX_8bdcd3dd2bddb78014999a16ce" ON "drive_file" ("maybePorn");
 
 -- fedired-url-move
-UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired';
-UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired/issues';
+UPDATE "meta" SET "repositoryUrl" = 'https://github.com/fedired-dev/fedired-project';
+UPDATE "meta" SET "feedbackUrl" = 'https://github.com/fedired-dev/fedired-project/issues';
 
 -- remove-native-utils-migration
 CREATE TABLE "seaql_migrations" (

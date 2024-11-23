@@ -70,7 +70,7 @@
 						<small
 							>Powered by
 							<a
-								href="https://github.com/fedired-dev/fedired"
+								href="https://github.com/fedired-dev/fedired-project"
 								target="_blank"
 								>Fedired</a
 							></small

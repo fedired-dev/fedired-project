@@ -23,9 +23,9 @@ exit
     # Please replace the path according to your environment
     cd /home/fedired/fedired
     ```
-1. Download [`downgrade.sql`](https://github.com/fedired-dev/fedired/-/snippets/13/raw/main/downgrade.sql)
+1. Download [`downgrade.sql`](https://github.com/fedired-dev/fedired-project/-/snippets/13/raw/main/downgrade.sql)
     ```sh
-    wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired/-/snippets/13/raw/main/downgrade.sql
+    wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired-project/-/snippets/13/raw/main/downgrade.sql
     ```
 1. Execute the downgrade queries (this may take a while)
     ```sh
@@ -88,10 +88,10 @@ exit
     docker compose up --detach db
     # or podman-compose up --detach db
     ```
-1. Download [`downgrade.sql`](https://github.com/fedired-dev/fedired/-/snippets/13/raw/main/downgrade.sql)
+1. Download [`downgrade.sql`](https://github.com/fedired-dev/fedired-project/-/snippets/13/raw/main/downgrade.sql)
     ```sh
-    docker compose exec db wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired/-/snippets/13/raw/main/downgrade.sql
-    # or podman-compose exec db wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired/-/snippets/13/raw/main/downgrade.sql
+    docker compose exec db wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired-project/-/snippets/13/raw/main/downgrade.sql
+    # or podman-compose exec db wget -O /tmp/downgrade.sql https://github.com/fedired-dev/fedired-project/-/snippets/13/raw/main/downgrade.sql
     ```
 1. Revert database migrations (this may take a while)
     ```sh
@@ -124,7 +124,7 @@ exit
 
     services:
       web:
-        image: registry.github.com/fedired-dev/fedired:v20240206  # or v1.0.5-rc
+        image: registry.github.com/fedired-dev/fedired-project:v20240206  # or v1.0.5-rc
     ```
 1. Change database image from `docker.io/groonga/pgroonga` to `docker.io/postgres`
 

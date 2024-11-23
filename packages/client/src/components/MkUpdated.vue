@@ -35,7 +35,7 @@ import { version } from "@/config";
 import { i18n } from "@/i18n";
 
 const modal = shallowRef<InstanceType<typeof MkModal>>();
-const releaseUrl = 'https://github.com/fedired-dev/fedired/releases/latest'; 
+const releaseUrl = 'https://github.com/fedired-dev/fedired-project/releases/latest'; 
 </script>
 
 <style lang="scss" module>

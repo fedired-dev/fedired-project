@@ -34,7 +34,7 @@ sudo adduser --disabled-password fedired
 ## Instalar Fedired
 
 ```sh
-git clone --branch=main https://github.com/fedired-dev/fedired.git
+git clone --branch=main https://github.com/fedired-dev/fedired-project.git
 
 cd fedired
   ```
@@ -140,7 +140,7 @@ Puede verificar el estado del servicio mediante `systemctl status fedired`
 
 ## Actualizando Fedired
 
-> Consulte la [nota de la versión](https://github.com/fedired-dev/fedired/CHANGELOG.md) antes de actualizar. Para comprender los cambios y hay que hacer algo (normalmente no hacer nada).
+> Consulte la [nota de la versión](https://github.com/fedired-dev/fedired-project/CHANGELOG.md) antes de actualizar. Para comprender los cambios y hay que hacer algo (normalmente no hacer nada).
 
 Extraiga la base de datos principal, instale, cree y migre.
 

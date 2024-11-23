@@ -27,7 +27,7 @@ struct PackageJson {
 }
 
 const UPSTREAM_PACKAGE_JSON_URL: &str =
-    "https://github.com/fedired-dev/fedired/raw/main/package.json";
+    "https://github.com/fedired-dev/fedired-project/raw/main/package.json";
 
 static PACKAGE_JSON_CACHE: Cache<PackageJson> = Cache::new_with_ttl(Duration::hours(3));
 

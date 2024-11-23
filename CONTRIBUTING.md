@@ -26,4 +26,4 @@ Si deseas contribuir código, sigue estos pasos:
 2. **Clona tu Fork**: Clona tu repositorio en tu máquina local.
 
    ```bash
-   git clone https://github.com/fedired-dev/fedired.git
+   git clone https://github.com/fedired-dev/fedired-project.git

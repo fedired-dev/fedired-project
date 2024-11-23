@@ -28,8 +28,8 @@
 
 - [Instancia Oficial](https://fedired.com)
 - [Documentacion](https://docs.fedired.com)
-- [Inatalacion en Docker](https://github.com/fedired-dev/fedired-docker/blob/main/dev/docs/container.md)
-- [Repositorio Oficial](https://github.com/fedired-dev/fedired)
+- [Inatalacion en Docker](https://github.com/fedired-dev/fedired-project-docker/blob/main/dev/docs/container.md)
+- [Repositorio Oficial](https://github.com/fedired-dev/fedired-project)
 - [Donaciones](https://patreon.com/fedired)
 - [Traduciones](https://crowdin.com/project/fedired)
 
@@ -56,7 +56,7 @@ Sí, **Fedired** es completamente gratuito y siempre lo será.
 
 **Fedired** es más que una plataforma; es un movimiento hacia una red social más privada y descentralizada. ¡Únete a nuestra comunidad y ayuda a dar forma al futuro de las redes sociales!
 
-- **Contribuye en [GitHub](https://github.com/fedired-dev/fedired)**
+- **Contribuye en [GitHub](https://github.com/fedired-dev/fedired-project)**
 - **Haz una donación en [Patreon](https://patreon.com/fedired)**
 
 ## Importante:

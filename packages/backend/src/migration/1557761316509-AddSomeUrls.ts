@@ -6,10 +6,10 @@ export class AddSomeUrls1557761316509 implements MigrationInterface {
 			`ALTER TABLE "meta" ADD "ToSUrl" character varying(512)`,
 		);
 		await queryRunner.query(
-			`ALTER TABLE "meta" ADD "repositoryUrl" character varying(512) NOT NULL DEFAULT 'https://github.com/fedired-dev/fedired'`,
+			`ALTER TABLE "meta" ADD "repositoryUrl" character varying(512) NOT NULL DEFAULT 'https://github.com/fedired-dev/fedired-project'`,
 		);
 		await queryRunner.query(
-			`ALTER TABLE "meta" ADD "feedbackUrl" character varying(512) DEFAULT 'https://github.com/fedired-dev/fedired/issues'`,
+			`ALTER TABLE "meta" ADD "feedbackUrl" character varying(512) DEFAULT 'https://github.com/fedired-dev/fedired-project/issues'`,
 		);
 	}
 	async down(queryRunner: QueryRunner): Promise<void> {

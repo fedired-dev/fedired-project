@@ -17,8 +17,8 @@ pub fn is_safe_url(url: &str) -> bool {
 mod unit_test {
     #[test]
     fn is_safe_url() {
-        assert!(super::is_safe_url("http://github.com/fedired-dev/fedired"));
-        assert!(super::is_safe_url("https://github.com/fedired-dev/fedired"));
+        assert!(super::is_safe_url("http://github.com/fedired-dev/fedired-project"));
+        assert!(super::is_safe_url("https://github.com/fedired-dev/fedired-project"));
         assert!(super::is_safe_url(
             "http://github.com:80/fedired-dev/fedired"
         ));
@@ -35,7 +35,7 @@ mod unit_test {
         assert!(!super::is_safe_url(
             "https://github.com:35/fedired-dev/fedired"
         ));
-        assert!(!super::is_safe_url("ftp://github.com/fedired-dev/fedired"));
+        assert!(!super::is_safe_url("ftp://github.com/fedired-dev/fedired-project"));
         assert!(!super::is_safe_url("nyaa"));
         assert!(!super::is_safe_url(""));
     }
