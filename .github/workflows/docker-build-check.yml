@@ -1,0 +1,53 @@
+name: Build and Deploy Docker Image
+
+on:
+  push:
+    branches:
+      - main  # Esto puede cambiar a la rama que prefieras
+  pull_request:
+    branches:
+      - main  # Esto puede cambiar a la rama que prefieras
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Configurar Node.js en la versión que se usa en el Dockerfile
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    # Instalar pnpm
+    - name: Install pnpm
+      run: npm install -g pnpm
+
+    # Instalar dependencias usando pnpm
+    - name: Install dependencies
+      run: pnpm install --no-frozen-lockfile
+
+    # Verificar que no haya conflictos en el lockfile
+    - name: Verify lockfile (optional)
+      run: pnpm install --no-frozen-lockfile
+
+    # Construir la imagen Docker (usando la fase de construcción)
+    - name: Build Docker image
+      run: docker build --file Dockerfile --target build --tag fedired .
+
+    # Crear la imagen de producción (usando la fase de producción)
+    - name: Build production Docker image
+      run: docker build --file Dockerfile --target production --tag fedired:latest .
+
+    # Login a Docker Hub usando los secretos de GitHub
+    - name: Login to Docker Hub
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+    # Subir la imagen Docker a Docker Hub
+    - name: Push Docker image to Docker Hub
+      run: |
+        docker tag fedired:latest ${{ secrets.DOCKER_USERNAME }}/fedired:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/fedired:latest

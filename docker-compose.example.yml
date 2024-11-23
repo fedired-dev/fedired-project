@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+  web:
+    # Usar imagen directamente desde Docker Hub bajo el usuario 'fedired'
+    image: docker.io/fedired/fedired:latest  # Imagen publicada en Docker Hub bajo el usuario 'fedired'
+    container_name: fedired_web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    networks:
+      - calcnet
+    environment:
+      NODE_ENV: production
+      NODE_OPTIONS: --max-old-space-size=3072
+    volumes:
+      - ./custom:/fedired/custom:ro
+      - ./files:/fedired/files
+      - ./.config:/fedired/.config:ro
+    healthcheck:
+      test: curl -f http://localhost:3000 || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    restart: unless-stopped
+    image: docker.io/redis:7.0-alpine
+    container_name: fedired_redis
+    networks:
+      - calcnet
+    volumes:
+      - ./redis:/data
+    healthcheck:
+      test: redis-cli ping
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  db:
+    restart: unless-stopped
+    image: groonga/pgroonga:latest
+    container_name: fedired_db
+    networks:
+      - calcnet
+    env_file:
+      - .config/docker.env
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    healthcheck:
+      test: pg_isready --user="$${POSTGRES_USER}" --dbname="$${POSTGRES_DB}"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+networks:
+  calcnet:
